@@ -10,7 +10,7 @@ export default async (req, res) => {
 
       const users = await findApplyUser();
 
-      return res.status(200).json({ data: users, code: 2000, desc: 'success' });
+      return res.status(200).json(respData(users));
     } catch (e) {
       console.log('get users failed', e);
       return respErr('get users failed');
