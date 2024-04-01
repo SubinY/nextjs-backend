@@ -14,7 +14,7 @@ export default function Home({ allPostsData }) {
       }
     });
     const { code, message, data } = await resp.json();
-    setTableData(data)
+    setTableData(data.data)
   };
   const handleSubmit = async () => {
     const resp = await fetch('/api/set-apply-user', {

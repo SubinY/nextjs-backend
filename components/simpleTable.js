@@ -6,7 +6,7 @@ const TableComponent = ({ data = [] }) => {
     { field: 'name', label: '姓名' },
     { field: 'phone', label: '手机号码' },
     { field: 'course', label: '喜好课程' },
-    { field: 'submitTime', label: '提交时间' },
+    { field: 'create_at', label: '提交时间' },
     { field: 'age', label: '小孩年龄' }
   ];
 
