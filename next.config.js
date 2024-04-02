@@ -19,15 +19,11 @@ module.exports = {
             key: 'Access-Control-Allow-Headers',
             value:
               'X-CSRF-Token, X-Requested-With, Content-Type, Accept, Authorization' // 允许的请求头
-          },
-          {
-            key: 'Access-Control-Allow-Credentials',
-            value: true // 是否允许发送 cookies
           }
         ]
       }
     ];
-  },
+  }
   // async rewrites() {
   //   return [
   //     {
