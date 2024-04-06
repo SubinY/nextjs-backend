@@ -35,7 +35,7 @@ export async function findApplyUser() {
 
 export async function deleteApplyUser() {
   const db = await getDb();
-  const res = await db.query(`DELETE * FROM applyUsers`);
+  const res = await db.query(`DELETE FROM applyUsers`);
 
   const { rows } = res;
   return rows;

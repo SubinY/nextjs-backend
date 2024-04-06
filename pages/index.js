@@ -35,7 +35,13 @@ export default function Home({ allPostsData }) {
       await fetch('/api/clear-apply-user', {
         method: 'DELETE'
       });
-      alert('清空数据成功')
+      const { code, message, data } = await resp.json();
+      if (code === 2000) {
+        alert('清空数据成功')
+        handleClick()
+      } else {
+        alert('清空数据失败')
+      }
     } catch (error) {
       alert('清空数据失败')
     }
