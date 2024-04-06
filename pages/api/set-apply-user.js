@@ -10,7 +10,7 @@ export default async (req, res) => {
 
       const users = await insertApplyUser(params);
 
-      return res.status(200).json({ users });
+      return res.status(200).json(respData(users));
     } catch (e) {
       console.log('get users failed', e);
       return respErr('get users failed');
