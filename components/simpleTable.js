@@ -54,8 +54,8 @@ const TableComponent = ({ data = [] }) => {
       <tbody>
         {data?.map((item, index) => (
           <tr key={index}>
-            <td className={styles.td}>{item.phone}</td>
             <td className={styles.td}>{item.name}</td>
+            <td className={styles.td}>{item.phone}</td>
             <td className={styles.td}>{item.date}</td>
             <td className={styles.td}>{item.course}</td>
             <td className={styles.td}>{item.age}</td>
