@@ -30,6 +30,17 @@ export default function Home({ allPostsData }) {
     const { code, message, data } = await resp.json();
   };
 
+  const handleDelete = async () => {
+    try {
+      await fetch('/api/clear-apply-user', {
+        method: 'DELETE'
+      });
+      alert('清空数据成功')
+    } catch (error) {
+      alert('清空数据失败')
+    }
+  }
+
   return (
     <Layout home>
       <Head>
@@ -37,6 +48,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <button onClick={() => handleClick()}>查询</button>
       <button onClick={() => handleSubmit()}>提交</button>
+      <button onClick={() => handleDelete()}>清空</button>
       <TableComponent data={tableData}></TableComponent>
     </Layout>
   );
