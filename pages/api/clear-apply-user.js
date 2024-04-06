@@ -1,4 +1,4 @@
-import { respData, respErr } from '../../lib/resp';
+import { respOk, respErr } from '../../lib/resp';
 import { deleteApplyUser } from '../../models/applyUser';
 
 export default async (req, res) => {
@@ -6,7 +6,7 @@ export default async (req, res) => {
     try {
       const users = await deleteApplyUser();
 
-      return res.status(200).json();
+      return res.status(200).json(respOk());
     } catch (e) {
       console.log('delete users failed', e);
       return respErr('delete users failed');
